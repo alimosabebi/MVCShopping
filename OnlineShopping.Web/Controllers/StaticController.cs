@@ -6,7 +6,7 @@ namespace BasicScaffolder
     {
         protected override void HandleUnknownAction(string actionName)
         {
-            this.View(actionName).ExecuteResult(this.ControllerContext);
+            View(actionName).ExecuteResult(ControllerContext);
         }
     }
 }

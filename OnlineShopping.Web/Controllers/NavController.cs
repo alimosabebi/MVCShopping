@@ -1,10 +1,7 @@
-﻿using OnlineShopping.Domain.Abstract;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using OnlineShopping.Domain.Abstract;
 
 namespace OnlineShopping.Web.Controllers
 {

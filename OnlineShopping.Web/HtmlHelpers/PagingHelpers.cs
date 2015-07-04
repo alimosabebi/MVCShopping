@@ -1,11 +1,7 @@
-﻿using OnlineShopping.Web.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Text;
-using System.Web;
 using System.Web.Mvc;
-
+using OnlineShopping.Web.Models;
 
 namespace OnlineShopping.Web.HtmlHelpers
 {
@@ -25,7 +21,7 @@ namespace OnlineShopping.Web.HtmlHelpers
                     tag.AddCssClass("btn-primary");
                 }
                 tag.AddCssClass("btn btn-default");
-                result.Append(tag.ToString());
+                result.Append(tag);
             }
             return MvcHtmlString.Create(result.ToString());
         }

@@ -1,9 +1,6 @@
-﻿using OnlineShopping.Domain.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using OnlineShopping.Domain.Abstract;
+using OnlineShopping.Domain.Entities;
 
 namespace OnlineShopping.Domain.Concrete
 {
@@ -11,7 +8,7 @@ namespace OnlineShopping.Domain.Concrete
     {
 
         private readonly EFDbContext context = new EFDbContext();
-        public IEnumerable<Entities.Product> Products
+        public IEnumerable<Product> Products
         {
             get { return context.Products; }
         }

@@ -1,21 +1,18 @@
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(OnlineShopping.Web.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(OnlineShopping.Web.App_Start.NinjectWebCommon), "Stop")]
+using System;
+using System.Web;
+using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+using Ninject;
+using Ninject.Web.Common;
+using OnlineShopping.Domain.Abstract;
+using OnlineShopping.Domain.Concrete;
+using OnlineShopping.Web.App_Start;
+using WebActivatorEx;
+
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
+[assembly: ApplicationShutdownMethod(typeof(NinjectWebCommon), "Stop")]
 
 namespace OnlineShopping.Web.App_Start
 {
-    using System;
-    using System.Web;
-
-    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
-    using Ninject;
-    using Ninject.Web.Common;
-    using Moq;
-    using OnlineShopping.Domain.Abstract;
-    using OnlineShopping.Domain.Entities;
-    using System.Collections.Generic;
-    using OnlineShopping.Domain.Concrete;
-
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();

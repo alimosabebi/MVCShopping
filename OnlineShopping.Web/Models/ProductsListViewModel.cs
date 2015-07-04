@@ -1,8 +1,5 @@
-﻿using OnlineShopping.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
+using OnlineShopping.Domain.Entities;
 
 namespace OnlineShopping.Web.Models
 {

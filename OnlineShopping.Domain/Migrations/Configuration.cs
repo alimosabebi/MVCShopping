@@ -1,11 +1,9 @@
+using System.Data.Entity.Migrations;
+using OnlineShopping.Domain.Concrete;
+
 namespace OnlineShopping.Domain.Migrations
 {
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-
-    internal sealed class Configuration : DbMigrationsConfiguration<OnlineShopping.Domain.Concrete.EFDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<EFDbContext>
     {
         public Configuration()
         {
@@ -13,7 +11,7 @@ namespace OnlineShopping.Domain.Migrations
             ContextKey = "OnlineShopping.Domain.Concrete.EFDbContext";
         }
 
-        protected override void Seed(OnlineShopping.Domain.Concrete.EFDbContext context)
+        protected override void Seed(EFDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
